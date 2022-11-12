@@ -18,14 +18,17 @@ $stmt = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%'");
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 foreach($results as $row){
-  echo "Name: ".$row['name'];
+  echo "<ul>";
+  echo "<li>Name: ".$row['name'];
   echo " ";
   echo "Continent: ".$row["continent"];
   echo " ";
   echo "Region: ".$row["independence_year"];
   echo " ";
   echo "Head of State: ".$row["head_of_state"];
+  echo "</li>";
   echo "<br>";
+  echo "</ul>";
 }
 
 ?>

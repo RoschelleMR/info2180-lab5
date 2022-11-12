@@ -5,9 +5,9 @@ window.addEventListener("load", function () {
 
   btn.addEventListener("click", function (event) {
     event.preventDefault();
+
     let input_value = input.value;
     let url = `world.php?country=${input_value}`;
-    console.log(url);
 
     fetch(url)
       .then(function (response) {
@@ -18,7 +18,6 @@ window.addEventListener("load", function () {
         }
       })
       .then(function (data) {
-        console.log(data);
         result.innerHTML = data;
       });
   });

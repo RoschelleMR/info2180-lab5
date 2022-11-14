@@ -77,7 +77,7 @@ function city_table($conn, $country){
     echo "</table>";
   }
   else{
-    echo "$country is not a country";
+    echo "That was either not a country, or you did not specify a country";
   }
  
 }
